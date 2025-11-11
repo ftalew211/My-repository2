@@ -695,6 +695,54 @@
       font-size: 0.9rem;
     }
 
+    .downloads-section {
+      margin-top: 3rem;
+    }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .download-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-soft);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .download-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lift);
+    }
+
+    .download-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent-cyan);
+    }
+
+    .download-title {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--accent-gold);
+    }
+
+    .download-description {
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
     @media (max-width: 760px) {
       .nav__toggle {
         display: inline-flex;
@@ -710,4 +758,343 @@
         padding: 1.2rem;
         background: rgba(5, 24, 70, 0.94);
         border-radius: 18px;
-        border: 1px
+        border: 1px solid rgba(140, 197, 255, 0.28);
+        box-shadow: var(--shadow-lift);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+      }
+
+      .nav__links.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav__links a {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .project-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .report-tabs {
+        flex-direction: column;
+      }
+
+      .download-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="#" class="nav__brand">Ftalew Dagnaw</a>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span>☰</span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#course">Course Overview</a></li>
+        <li><a href="#downloads">Downloads</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" id="hero">
+      <div class="container">
+        <div class="hero">
+          <div class="hero__text">
+            <span class="hero__eyebrow">Senior Monitoring & Evaluation Advisor</span>
+            <h1>Ftalew Dagnaw Gebreyesus</h1>
+            <p>Specializing in health information systems, data analytics, and data-driven public health outcomes with extensive experience in monitoring and evaluation, health informatics, and capacity building.</p>
+            <a href="#contact" class="hero__cta">Get in Touch</a>
+          </div>
+          <div class="hero__image">
+            <div class="portrait-frame">
+              <img src="https://github.com/ftalew211/My-repository2/blob/main/Ftalew%20Picture.png?raw=true" alt="Ftalew Dagnaw" class="hero__portrait" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="card">
+          <h2>About Me</h2>
+          <p>I am a dedicated public health professional with over 15 years of experience in monitoring and evaluation, health information systems, and data analytics. My expertise lies in designing and implementing M&E frameworks, conducting data analysis, and utilizing health informatics to improve public health outcomes.</p>
+          <p>Throughout my career, I have worked with various international organizations, government agencies, and NGOs to strengthen health systems and improve data quality and utilization for decision-making.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <h2>Professional Experience</h2>
+        <div class="card">
+          <div class="experience__item">
+            <div class="experience__role">Senior Monitoring & Evaluation Advisor</div>
+            <div class="experience__meta">
+              <span>John Snow, Inc. (JSI)</span>
+              <span>2021 - Present</span>
+            </div>
+            <ul>
+              <li>Lead the design and implementation of M&E frameworks for large-scale health programs</li>
+              <li>Develop data collection tools and systems for tracking program performance</li>
+              <li>Provide technical assistance and capacity building to M&E staff and partners</li>
+              <li>Conduct data analysis and visualization to inform program decision-making</li>
+            </ul>
+          </div>
+          <div class="experience__item">
+            <div class="experience__role">Health Information System Specialist</div>
+            <div class="experience__meta">
+              <span>World Health Organization (WHO)</span>
+              <span>2018 - 2021</span>
+            </div>
+            <ul>
+              <li>Supported the implementation and scale-up of DHIS2 in multiple countries</li>
+              <li>Developed training materials and conducted workshops on health data management</li>
+              <li>Provided technical support for data quality assessment and improvement</li>
+              <li>Collaborated with ministries of health to strengthen health information systems</li>
+            </ul>
+          </div>
+          <div class="experience__item">
+            <div class="experience__role">M&E Officer</div>
+            <div class="experience__meta">
+              <span>Pathfinder International</span>
+              <span>2015 - 2018</span>
+            </div>
+            <ul>
+              <li>Managed M&E activities for reproductive health programs</li>
+              <li>Conducted routine data quality audits and supported performance reviews</li>
+              <li>Prepared M&E reports for donors and stakeholders</li>
+              <li>Supported the development of program logframes and M&E plans</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="grid grid--two">
+          <div class="card">
+            <h3>Data Analysis & Visualization</h3>
+            <div>
+              <span class="tag">R</span>
+              <span class="tag">Python</span>
+              <span class="tag">Stata</span>
+              <span class="tag">SPSS</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">Power BI</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Health Information Systems</h3>
+            <div>
+              <span class="tag">DHIS2</span>
+              <span class="tag">OpenMRS</span>
+              <span class="tag">CommCare</span>
+              <span class="tag">Kobo Toolbox</span>
+              <span class="tag">ODK</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Monitoring & Evaluation</h3>
+            <div>
+              <span class="tag">Logical Framework</span>
+              <span class="tag">Results Framework</span>
+              <span class="tag">Performance Monitoring Plan</span>
+              <span class="tag">Data Quality Assessment</span>
+              <span class="tag">Evaluation Design</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Database Management</h3>
+            <div>
+              <span class="tag">SQL</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Microsoft Access</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="course">
+      <div class="container">
+        <h2>Data Analytics Course Overview</h2>
+        <div class="card">
+          <div class="course-overview">
+            <label class="lesson">
+              <div class="lesson__header">
+                <h4>Introduction to Data Analytics</h4>
+                <span class="lesson__status">Completed</span>
+              </div>
+              <p>Foundational concepts of data analytics, including data types, data collection methods, and basic analytical techniques.</p>
+              <div class="progress-bar">
+                <span style="width: 100%"></span>
+              </div>
+            </label>
+            <label class="lesson">
+              <div class="lesson__header">
+                <h4>Data Visualization Principles</h4>
+                <span class="lesson__status">Completed</span>
+              </div>
+              <p>Principles of effective data visualization, chart types, and dashboard design for communicating insights.</p>
+              <div class="progress-bar">
+                <span style="width: 100%"></span>
+              </div>
+            </label>
+            <label class="lesson">
+              <div class="lesson__header">
+                <h4>Statistical Analysis with R</h4>
+                <span class="lesson__status">In Progress</span>
+              </div>
+              <p>Statistical methods and their implementation in R, including hypothesis testing, regression analysis, and ANOVA.</p>
+              <div class="progress-bar">
+                <span style="width: 75%"></span>
+              </div>
+            </label>
+            <label class="lesson">
+              <div class="lesson__header">
+                <h4>Database Management & SQL</h4>
+                <span class="lesson__status">Upcoming</span>
+              </div>
+              <p>Database design, management, and querying using SQL for efficient data retrieval and manipulation.</p>
+              <div class="progress-bar">
+                <span style="width: 0%"></span>
+              </div>
+            </label>
+          </div>
+          <div class="course-footer">
+            <div>Overall Progress: <strong>68%</strong></div>
+            <div>Estimated Completion: <strong>December 2023</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="downloads">
+      <div class="container">
+        <h2>Research & Reports</h2>
+        <div class="download-grid">
+          <div class="download-card">
+            <div class="download-icon">📊</div>
+            <h3 class="download-title">Job Market Data Analysis</h3>
+            <p class="download-description">Comprehensive analysis of job market trends, employment patterns, and workforce dynamics based on recent data.</p>
+            <a href="https://github.com/ftalew211/My-repository2/raw/main/Job%20market%20%20analysis%20report.pdf" class="pdf-button pdf-button-primary" download>
+              Download PDF
+            </a>
+          </div>
+          <div class="download-card">
+            <div class="download-icon">📈</div>
+            <h3 class="download-title">GDP vs Life Expectancy Analysis</h3>
+            <p class="download-description">Statistical analysis exploring the relationship between GDP per capita and life expectancy across different countries.</p>
+            <a href="https://github.com/ftalew211/My-repository2/raw/main/relationship%20between%20GDP%20per%20capita%20and%20life%20expectancy_by_Ftalew_Dagnaw.pdf" class="pdf-button pdf-button-primary" download>
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>Contact Information</h2>
+        <div class="grid grid--two">
+          <div class="card contact-card">
+            <h3>Get in Touch</h3>
+            <p>Feel free to reach out for collaborations, consultations, or any inquiries regarding my work in monitoring and evaluation, health information systems, or data analytics.</p>
+            <ul class="contact-list">
+              <li>
+                <span>Email:</span>
+                <a href="mailto:ftalew.dagnaw@example.com">ftalew.dagnaw@example.com</a>
+              </li>
+              <li>
+                <span>Phone:</span>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+              </li>
+              <li>
+                <span>LinkedIn:</span>
+                <a href="https://linkedin.com/in/ftalew-dagnaw" target="_blank">linkedin.com/in/ftalew-dagnaw</a>
+              </li>
+              <li>
+                <span>GitHub:</span>
+                <a href="https://github.com/ftalew211" target="_blank">github.com/ftalew211</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Professional Affiliations</h3>
+            <ul>
+              <li>American Public Health Association (APHA)</li>
+              <li>International Society for Disease Surveillance (ISDS)</li>
+              <li>Global Evaluation Initiative (GEI)</li>
+              <li>Digital Health and Interoperability Working Group</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Ftalew Dagnaw Gebreyesus. All rights reserved.</p>
+      <p>Designed with a focus on accessibility and user experience.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      document.querySelector('.nav__links').classList.toggle('show');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const nav = document.querySelector('.nav');
+      const isClickInsideNav = nav.contains(event.target);
+      
+      if (!isClickInsideNav) {
+        document.querySelector('.nav__links').classList.remove('show');
+      }
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu after clicking a link
+          document.querySelector('.nav__links').classList.remove('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
